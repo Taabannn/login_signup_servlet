@@ -10,7 +10,7 @@ This is a simple signup/login page which is implemented by HTTPServlet and Hiber
 
 . Download the files by pressing download button or clone this repo by the the following command in your git bash:
 
-       git clone https://github.com/Taabannn/online-ticket-reservationSys.git
+       git clone https://github.com/Taabannn/login_signup_servlet.git
        
 . Open project in your Java IDE.
 
