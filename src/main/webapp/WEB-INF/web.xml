@@ -3,9 +3,9 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          id="WebApp_ID" version="2.5">
 
-    <!--<servlet>
+    <servlet>
         <servlet-name>Login</servlet-name>
-        <servlet-class>ir.maktab58.login.Login</servlet-class>
+        <servlet-class>ir.maktab58.view.login.Login</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -14,23 +14,20 @@
 
     <servlet>
         <servlet-name>WelcomeServlet</servlet-name>
-        <servlet-class>ir.maktab58.login.WelcomeServlet</servlet-class>
+        <servlet-class>ir.maktab58.view.login.WelcomeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>WelcomeServlet</servlet-name>
         <url-pattern>/welcome</url-pattern>
-    </servlet-mapping>-->
+    </servlet-mapping>
 
-    <!--<servlet>
+    <servlet>
         <servlet-name>SignUpServlet</servlet-name>
-        <servlet-class>ir.maktab58.session.servlet.SignUp</servlet-class>
+        <servlet-class>ir.maktab58.view.signup.SignUp</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SignUpServlet</servlet-name>
         <url-pattern>/signup</url-pattern>
     </servlet-mapping>
 
-    <welcome-file-list>
-        <welcome-file>signup.html</welcome-file>
-    </welcome-file-list>-->
 </web-app>
