@@ -5,11 +5,11 @@ import lombok.Builder;
 /**
  * @author Taban Soleymani
  */
-public class RegisterException extends RuntimeException {
+public class LoginException extends RuntimeException {
     private int errorCode;
 
     @Builder(setterPrefix = "with")
-    public RegisterException(String message, int errorCode) {
+    public LoginException(String message, int errorCode) {
         super(message);
         this.errorCode = errorCode;
     }

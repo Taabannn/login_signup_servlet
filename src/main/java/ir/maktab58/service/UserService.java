@@ -2,7 +2,7 @@ package ir.maktab58.service;
 
 import ir.maktab58.dao.UserDao;
 import ir.maktab58.entity.User;
-import ir.maktab58.exceptions.RegisterException;
+import ir.maktab58.exceptions.SignupException;
 import ir.maktab58.service.validator.EmailValidator;
 import ir.maktab58.service.validator.UserAndPassValidator;
 
@@ -33,18 +33,22 @@ public class UserService {
         boolean emailValid = emailValidator.isEmailValid(email);
 
         if ((firstName == null) || (lastName == null))
-            throw RegisterException.builder()
+            throw SignupException.builder()
                     .withMessage("first name and last name can not be null.")
                     .withErrorCode(400).build();
 
         if (!emailValid)
-            throw RegisterException.builder()
+            throw SignupException.builder()
                     .withMessage("wrong format of email.")
                     .withErrorCode(400).build();
 
         if (!userAndPassValid)
-            throw RegisterException.builder()
+            throw SignupException.builder()
                     .withMessage("invalid user or pass.")
                     .withErrorCode(400).build();
+    }
+
+    public User getUserByUserAndPass(String username, String password) {
+        return userDao.findUserByUserAndPass(username, password);
     }
 }
