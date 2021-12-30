@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>authentication</title>
+    <title>signup</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -21,15 +21,14 @@
             <img src="female-avatar-girl-face-woman-user-9-svgrepo-com.svg" id="icon" alt="User Icon" />
         </div>
 
-        <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-            <input type="submit" class="fadeIn fourth" value="Log In">
+        <form action="\signup" method="post">
+            <input type="text" class="fadeIn second" name="first_name" placeholder="first name">
+            <input type="text" class="fadeIn second" name="last_name" placeholder="last name">
+            <input type="text" class="fadeIn second" name="last_name" placeholder="email">
+            <input type="text" id="login" class="fadeIn second" name="username" placeholder="username">
+            <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+            <input type="submit" class="fadeIn fourth" value="Sign Up">
         </form>
-
-        <div id="formFooter">
-            <a class="underlineHover" href="signup.html">Register</a>
-        </div>
 
     </div>
 </div>
