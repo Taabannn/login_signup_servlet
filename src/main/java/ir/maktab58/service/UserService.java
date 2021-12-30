@@ -2,6 +2,7 @@ package ir.maktab58.service;
 
 import ir.maktab58.dao.UserDao;
 import ir.maktab58.entity.User;
+import ir.maktab58.service.validator.UserAndPassValidator;
 
 /**
  * @author Taban Soleymani
