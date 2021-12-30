@@ -1,4 +1,4 @@
-package ir.maktab58.view;
+package ir.maktab58.view.login;
 
 import ir.maktab58.dao.UserDao;
 import ir.maktab58.entity.User;
@@ -26,7 +26,7 @@ public class Login extends HttpServlet {
         String password = req.getParameter("password");
 
         try {
-            User user = userService.getUserByUserAndPass(username, password);
+            userService.getUserByUserAndPass(username, password);
             req.getRequestDispatcher("/welcome").forward(req, resp);
         } catch (RuntimeException e) {
             out.print(e.getMessage());

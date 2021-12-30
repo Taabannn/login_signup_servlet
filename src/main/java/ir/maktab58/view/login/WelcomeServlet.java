@@ -1,4 +1,4 @@
-package ir.maktab58.view;
+package ir.maktab58.view.login;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

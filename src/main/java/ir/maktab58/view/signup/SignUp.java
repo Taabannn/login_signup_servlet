@@ -1,4 +1,4 @@
-package ir.maktab58.view;
+package ir.maktab58.view.signup;
 
 import ir.maktab58.service.UserService;
 
