@@ -20,15 +20,16 @@ public class SignUp extends HttpServlet {
         PrintWriter out = resp.getWriter();
         resp.setContentType("text/html");
 
+        String firstName = req.getParameter("first_name");
+        String lastName = req.getParameter("last_name");
+        String email = req.getParameter("email");
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
-        int id = userService.saveNewUser(username, password);
-
-        if (id != 0)
-            out.print("you've registered successfully");
-        else {
-            out.print("Invalid user or pass :(");
+        try {
+            userService.saveNewUser(firstName, lastName, email, username, password);
+        } catch (RuntimeException e) {
+            out.print(e.getMessage());
             req.getRequestDispatcher("signup.html").include(req, resp);
         }
     }

@@ -17,7 +17,7 @@ import javax.persistence.Id;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@Builder(setterPrefix = "with")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
