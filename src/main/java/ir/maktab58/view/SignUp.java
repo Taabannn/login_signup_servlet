@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import static java.awt.SystemColor.info;
+
 /**
  * @author Taban Soleymani
  */
@@ -28,6 +30,7 @@ public class SignUp extends HttpServlet {
 
         try {
             userService.saveNewUser(firstName, lastName, email, username, password);
+            out.println("<div>You've registered successfully.</div>");
         } catch (RuntimeException e) {
             out.print(e.getMessage());
             req.getRequestDispatcher("signup.html").include(req, resp);

@@ -17,7 +17,7 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
 
-        <!--<mapping class="ir.maktab58.BusTicketBooking.entity.Admin"/>-->
+        <mapping class="ir.maktab58.entity.User"/>
 
     </session-factory>
 </hibernate-configuration>
