@@ -13,6 +13,19 @@ public class UserService {
     private final UserDao userDao = new UserDao();
 
     public int saveNewUser(String firstName, String lastName, String email, String username, String password) {
+        validateEnterdFieldsForUser(firstName, lastName, email, username, password);
+
+        User user = User.builder()
+                .withFirstName(firstName)
+                .withLastName(lastName)
+                .withUsername(username)
+                .withPassword(password)
+                .withEmail(email).build();
+
+        return userDao.save(user);
+    }
+
+    private void validateEnterdFieldsForUser(String firstName, String lastName, String email, String username, String password) {
         UserAndPassValidator userAndPassValidator = UserAndPassValidator.getInstance();
         EmailValidator emailValidator = EmailValidator.getInstance();
 
@@ -33,15 +46,5 @@ public class UserService {
             throw RegisterException.builder()
                     .withMessage("invalid user or pass.")
                     .withErrorCode(400).build();
-
-        User user = User.builder()
-                .withFirstName(firstName)
-                .withLastName(lastName)
-                .withUsername(username)
-                .withPassword(password).build();
-
-        if (userAndPassValid)
-            return userDao.save(user);
-        return 0;
     }
 }
