@@ -30,7 +30,7 @@ public class SignUp extends HttpServlet {
 
         try {
             userService.saveNewUser(firstName, lastName, email, username, password);
-            out.println("<div>You've registered successfully.</div>");
+            out.write("You've registered successfully.");
         } catch (RuntimeException e) {
             out.print(e.getMessage());
             req.getRequestDispatcher("signup.html").include(req, resp);
